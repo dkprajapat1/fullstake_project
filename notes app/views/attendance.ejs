@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Attendance Predictor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="attendance.css">
+  <link href="output.css" rel="stylesheet">
+</head>
+<body class="bg-linear-to-r/shorter from-indigo-500 to-teal-400 h-[100vh]">
+  <nav class="flex justify-between px-5 py-2 bg-white/70 items-center">
+        <div class="flex gap-1 items-center">
+            <img class="w-10 h-10"
+                src="Attendance.png"
+                alt="logo">
+            <div class="font-bold text-xl">Attendance</div>
+        </div>
+        <div class="flex gap-2 text-gray-200 font-bold">
+           
+            <div
+                class="notebook bg-violet-600/90 h-8 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800 ">
+                Notebook</div>
+                <div
+                class="assignment bg-violet-600/90 h-8 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800">
+                Assignment</div>
+                <div
+                    class="text-white h-8 duration-300 scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer shadow-xl/10 bg-violet-950">
+                    Attendance predictor</div>
+            <a target="_blank" href="https://www.linkedin.com/in/dineshkumarprajapat/"
+                class="bg-violet-600/90 h-8 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800"
+                style="text-decoration: none; color: rgb(225, 223, 223);">Connect</a>
+        </div>
+    </nav>
+
+    <div class="w-fit m-auto bg-gray-200 mt-10 rounded-2xl px-5 py-2 text-xl flex gap-3">
+     <input class="total bg-gray-300 rounded-lg px-2 text-red-600" type="number" placeholder="Total Classes">
+     <input class="current bg-gray-300 rounded-lg px-2 text-red-600" type="number" placeholder="Attended Classes">
+     <input class="req bg-gray-300 rounded-lg px-2 text-red-600" type="number" placeholder="Required %">
+     <div class="submit_att duration-100 ease-in px-2 py-1 bg-blue-300 w-fit rounded-xl hover:bg-blue-400 hover:scale-90 cursor-pointer">Get Now</div>
+    </div>
+
+    <div class="display m-auto justify-around bg-white w-[50vw] px-5 mt-10 rounded-xl flex">
+
+    </div>
+
+    <script src="Attendance.js"></script>
+</body>
+</html>

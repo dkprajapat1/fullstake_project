@@ -1,0 +1,12 @@
+
+.dcurrent{
+    width: 20vw;;
+    height: 20vw;
+    font-size: 5vw;
+    font-weight: bolder;
+    background-color: rgb(232, 228, 228);
+    text-align: center;
+    align-content: center;
+    margin: 3vw 0px;
+    border-radius: 20px;
+}

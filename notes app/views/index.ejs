@@ -5,25 +5,34 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>E notebook</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link href="/output.css" rel="stylesheet">
+
 
 </head>
 
 <body>
-
-            <div class="navbar" href="#">
-                <img src="/download.jpeg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-                <div><strong><%=logo %></strong></div>
-             </div>
-    
+ <nav class="flex justify-between px-5 py-2 bg-white">
+   <div class="flex gap-1">
+    <img class="w-7 h-7" src="/download.jpeg" alt="logo">
+     <div class="font-bold text-xl"><%=logo %></div>
+   </div>
+    <div class="flex gap-2 text-gray-200 font-bold">
+        <div class="bg-violet-950 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800 ">Notebook</div>
+        <div class="callHomeButton bg-violet-600/90 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800 ">Assignment</div>
+        <div class="callAttButton bg-violet-600/90 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800 ">Attendance predictor</div>
+       <a target="_blank" href="https://www.linkedin.com/in/dineshkumarprajapat/"  class="bg-violet-600/90 duration-300 hover:scale-[0.9] px-2 py-1 rounded-3xl cursor-pointer hover:shadow-xl/10 hover:bg-violet-800" style="text-decoration: none; color: rgb(200, 200, 200);">Connect</a>
+    </div>
+ </nav>
 
     <div class="main">
-        <div class="container">
+
+        <div class="flex gap-[3vw] mx-5">
 
             <div class="box1">
-                <div class="title flex">
+                <div class="title flex justify-around">
                     <input type="text" placeholder="Title" spellcheck="false">
                     <input class="date hover" type="date">
                 </div>
@@ -32,19 +41,33 @@
                 <div class="submit hover">Submit</div>
             </div>
             <div class="box2">
-                <div class="navbox1 flex">
+                <div class="navbox1 flex justify-around">
                     <div class=" Refresh hover">Refresh</div>
                     <div class="delet hover">Delet All</div>
                 </div>
-                <div class="databox"></div>
+
+                <div class="databox">
+                    <div class="message">
+                        Hi 👋, this is my first full-stack project!
+                        In this app, you can add your notes and thoughts with a title and date.
+                        You can also delete a particular note or clear all notes with a single click.
+
+                        👉 Don't forget to hit <strong>Refresh</strong> to load your saved data.
+                        Thank you for using the app!
+                    </div>
+                </div>
 
             </div>
         </div>
     </div>
 
-    <footer class="footer">Made with ❤️ by <a href="https://www.linkedin.com/in/dinesh-kumar-prajapat-949a46318/"
+
+    <footer class="footer mt-4 bg-white/60 w-[100vw] text-center p-2">Made with ❤️ by <a href="https://www.linkedin.com/in/dinesh-kumar-prajapat-949a46318/"
             target="_blank">Dinesh Prajapat</a></footer>
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
     <script src="/main.js"></script>
 </body>
 

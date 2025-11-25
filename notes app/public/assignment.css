@@ -1,0 +1,31 @@
+.subject_div {
+    background-color: rgb(102, 204, 255);
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3px;
+}
+.div_delete{
+    cursor: pointer;
+    width: fit-content;
+    border-radius: 10px;
+}
+.div_delete:hover{
+    color: white;
+}
+.ass_no{
+    display: flex;
+    gap: 5px;
+}
+.ass_no_sub{
+    border-radius: 10px;
+    padding: 1px 10px;
+
+}
+.div_box{
+    display: flex;
+}
+.subject_name{
+    width: 15vw;
+}
