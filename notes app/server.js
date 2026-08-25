@@ -16,7 +16,6 @@ app.use(express.static("img"));
 app.use(express.static("src"));
 app.use(express.json());   // to handle data from frontend req.body
 
-
 let d ="Db data";
 let arr= "arr";
 let logo ="NoteBook"
