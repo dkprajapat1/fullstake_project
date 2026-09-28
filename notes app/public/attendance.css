@@ -1,6 +1,16 @@
 
-.dcurrent{
-    width: 20vw;;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
+.dcurrent {
+    width: 20vw;
     height: 20vw;
     font-size: 5vw;
     font-weight: bolder;
@@ -9,4 +19,160 @@
     align-content: center;
     margin: 3vw 0px;
     border-radius: 20px;
+    overflow-wrap: anywhere;
+}
+
+/* Result box: boxes wrap ho sakein */
+.display {
+    flex-wrap: wrap;
+}
+
+/* Nav buttons ka text kabhi beech se na toote */
+nav > div:last-child > * {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   Laptop / small desktop  (<= 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+    .display {
+        width: 70vw;
+    }
+
+    /* Inputs wala grey card thoda compact */
+    body > div.w-fit {
+        max-width: 96vw;
+        font-size: 1.05rem;
+    }
+}
+
+
+/* =========================================================
+   Tablet  (<= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 24px;
+    }
+
+    /* ---- Navbar ---- */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    nav > div:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    nav > div:last-child > * {
+        height: auto;
+        font-size: 0.9rem;
+    }
+
+    /* ---- Inputs card: wrap hokar 2 columns jaisa ---- */
+    body > div.w-fit {
+        width: 92vw;
+        margin-top: 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 1rem;
+        padding: 14px;
+    }
+
+    body > div.w-fit input {
+        flex: 1 1 40%;
+        min-width: 0;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 1rem; /* iOS zoom avoid */
+    }
+
+    body > div.w-fit .submit_att {
+        flex: 1 1 100%;
+        text-align: center;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
+
+    /* ---- Result area ---- */
+    .display {
+        width: 92vw;
+        margin-top: 24px;
+        padding: 0 12px;
+        gap: 12px;
+        justify-content: space-around;
+    }
+
+    .dcurrent {
+        width: 28vw;
+        height: auto;
+        min-height: 28vw;
+        font-size: 7vw;
+        margin: 4vw 0;
+        padding: 12px 8px;
+    }
+}
+
+
+/* =========================================================
+   Mobile  (<= 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+
+    nav > div:first-child .font-bold {
+        font-size: 1.05rem;
+    }
+
+    nav > div:last-child > * {
+        font-size: 0.8rem;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    /* Inputs ek ke neeche ek */
+    body > div.w-fit {
+        width: 94vw;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    body > div.w-fit input {
+        width: 100%;
+        flex: none;
+    }
+
+    body > div.w-fit .submit_att {
+        width: 100%;
+    }
+
+    /* Result boxes: 2 ek row me */
+    .display {
+        width: 94vw;
+        gap: 8px;
+    }
+
+    .dcurrent {
+        width: 43vw;
+        height: auto;
+        min-height: 38vw;
+        font-size: 8vw;
+        line-height: 1.25;
+        margin: 3vw 0;
+        padding: 12px 8px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }

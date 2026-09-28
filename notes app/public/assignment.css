@@ -1,3 +1,13 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+}
+
 .subject_div {
     background-color: rgb(102, 204, 255);
     border-radius: 10px;
@@ -5,27 +15,210 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3px;
+    gap: 6px;
+    align-items: center;
 }
-.div_delete{
+
+.div_delete {
     cursor: pointer;
     width: fit-content;
     border-radius: 10px;
+    flex-shrink: 0;
 }
-.div_delete:hover{
+
+.div_delete:hover {
     color: white;
 }
-.ass_no{
+
+.ass_no {
     display: flex;
     gap: 5px;
+    flex-wrap: wrap;
 }
-.ass_no_sub{
+
+.ass_no_sub {
     border-radius: 10px;
     padding: 1px 10px;
+}
 
-}
-.div_box{
+.div_box {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 0;
+    flex: 1;
 }
-.subject_name{
+
+.subject_name {
     width: 15vw;
+    min-width: 90px;
+    overflow-wrap: anywhere;
+}
+
+/* Nav buttons ka text kabhi beech se na toote */
+nav > div:last-child > * {
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   Laptop / small desktop  (<= 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+    body > div.rounded-2xl {
+        width: 90vw;
+    }
+
+    .subject_name {
+        width: 22vw;
+    }
+}
+
+
+/* =========================================================
+   Tablet  (<= 768px)
+   ========================================================= */
+@media (max-width: 768px) {
+
+    /* Page height content ke hisab se badhe */
+    body {
+        height: auto;
+        min-height: 100vh;
+        padding-bottom: 24px;
+    }
+
+    /* ---- Navbar: 2 rows me wrap ---- */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    nav > div:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    nav > div:last-child > * {
+        height: auto;
+        font-size: 0.9rem;
+    }
+
+    /* ---- Main white card ---- */
+    body > div.rounded-2xl {
+        width: 94vw;
+        height: auto;
+        min-height: 70vh;
+        margin-top: 4vh;
+        padding-bottom: 8px;
+    }
+
+    /* Add / Refresh / Clear buttons row */
+    body > div.rounded-2xl > div:first-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding: 0 8px;
+    }
+
+    /* Subjects list wala bordered box */
+    body > div.rounded-2xl > div:last-child {
+        height: auto;
+        min-height: 50vh;
+    }
+
+    /* Info text chhota */
+    .subjects > div {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    /* ---- Subject rows ---- */
+    .subject_name {
+        width: 30vw;
+    }
+
+    /* ---- Add subject popup: center + full width ---- */
+    .subject_form {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90vw;
+        max-width: 26rem;
+        max-height: 90vh;
+        overflow-y: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .subject_form input {
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        font-size: 1rem; /* iOS zoom avoid */
+    }
+}
+
+
+/* =========================================================
+   Mobile  (<= 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+
+    nav > div:first-child .font-bold {
+        font-size: 1.05rem;
+    }
+
+    nav > div:last-child > * {
+        font-size: 0.8rem;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    body > div.rounded-2xl {
+        width: 96vw;
+        border-radius: 14px;
+    }
+
+    body > div.rounded-2xl > div:first-child > * {
+        font-size: 0.85rem;
+    }
+
+    .subjects > div {
+        font-size: 0.9rem;
+        line-height: 1.35rem;
+    }
+
+    /* Subject row: naam upar, assignment counts neeche */
+    .subject_div {
+        padding: 6px;
+    }
+
+    .div_box {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .subject_name {
+        width: 100%;
+        min-width: 0;
+        font-weight: 600;
+    }
+
+    .ass_no_sub {
+        padding: 1px 8px;
+        font-size: 0.85rem;
+    }
+
+    .subject_form {
+        width: 92vw;
+    }
 }

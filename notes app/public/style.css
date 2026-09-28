@@ -1,176 +1,307 @@
-   * {
-       margin: 0;
-       padding: 0;
-   }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-   body {
-       background: linear-gradient(to left, #87488f, #41206d);
-   }
+body {
+    background: linear-gradient(to left, #87488f, #41206d);
+}
 
-   .navbar {
-       background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
-       display: flex;
-       flex-direction: row;
-       justify-content: start;
-       padding-left: 10px;
-       display: flex;
+img {
+    max-width: 100%;
+}
 
-   }
+.navbar {
+    background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255));
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    padding-left: 10px;
+}
 
-   .navbar>:nth-child(2) {
-       font-size: larger;
-       font-style: italic;
-       font-weight: bolder;
-       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-       margin-left: 5px;
-   }
+.navbar>:nth-child(2) {
+    font-size: larger;
+    font-style: italic;
+    font-weight: bolder;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 5px;
+}
 
-   .box1,
-   .box2 {
-       padding: 10px;
-       border-radius: 20px;
-       margin-top: 2vh;
-       border: 1px solid;
-       height: 80vh;
-   }
+/* Nav buttons ka text kabhi beech se na toote */
+nav > div:last-child > * {
+    white-space: nowrap;
+}
 
-   .title,
-   .search {
-       margin-bottom: 5px;
-       border: none;
-   }
+/* Footer: 100vw scrollbar ki wajah se horizontal scroll deta tha */
+footer.footer {
+    width: 100%;
+}
 
-   .title>input {
-       border: none;
-       padding: 2px 10px;
-       margin: 5px 0px;
-       background-color: rgba(215, 211, 240, 0.852);
-       text-align: left;
-       font-style: italic;
-       font-weight: bolder;
-       border-radius: 5px;
+/* ---------- Main boxes ---------- */
+.box1,
+.box2 {
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 2vh;
+    border: 1px solid;
+    height: 80vh;
+}
+
+.title,
+.search {
+    margin-bottom: 5px;
+    border: none;
+}
+
+.title>input {
+    border: none;
+    padding: 2px 10px;
+    margin: 5px 0px;
+    background-color: rgba(215, 211, 240, 0.852);
+    text-align: left;
+    font-style: italic;
+    font-weight: bolder;
+    border-radius: 5px;
+    min-width: 0;
+}
+
+.box1 {
+    background: linear-gradient(to right, #87488f54, #41206d69);
+    width: 70vw;
+}
+
+.box2 {
+    background-color: rgba(181, 137, 252, 0.838);
+    width: 40vw;
+    transition: all 1s;
+}
+
+.databox {
+    background-color: rgba(237, 236, 188, 0.532);
+    height: 70vh;
+    justify-self: center;
+    border-radius: 20px;
+    margin-top: 5px;
+    overflow-x: auto;
+    white-space: pre-line;
+    width: auto;
+}
+
+.message {
+    padding: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-control {
+    background-color: rgba(201, 189, 232, 0.637);
+    max-height: 70vh;
+    height: 60vh;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.submit,
+.button,
+.Refresh,
+.delet {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 1px 7px;
+    background-color: lightblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    justify-self: center;
+    margin-top: 5px;
+}
+
+.hover:hover {
+    cursor: pointer;
+    background-color: rgba(28, 28, 255, 0.258);
+    color: white;
+}
+
+.dataplate {
+    background-color: rgba(242, 242, 242, 0.884);
+    border-radius: 10px;
+    padding: 3px 10px;
+    margin: 10px;
+    transition: all 0.5s;
+    white-space: pre-line;
+    width: 27vw;
+    max-width: calc(100% - 20px);
+    overflow-wrap: anywhere;
+}
+
+.deletbutton {
+    border: none;
+    display: flex;
+    padding: 2px 5px;
+    background-color: #ce4a4a;
+    color: white;
+    border-radius: 20px;
+    font-size: small;
+    margin-top: 5px;
+    transition: all 0.5s;
+}
+
+.deletbutton:hover {
+    background-color: red;
+    scale: 1.1;
+}
+
+::selection {
+    background-color: rgba(255, 255, 0, 0.466);
+    /* highlight color */
+    color: black;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #3431e568 transparent;
+    /* thumb color, track color */
+}
+
+/* Webkit browsers: Chrome, Edge, Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #adb2e6;
+    border-radius: 4px;
+}
 
 
-   }
+/* =========================================================
+   Tablet  (<= 768px)  -> boxes ek ke neeche ek
+   ========================================================= */
+@media (max-width: 768px) {
 
-   .box1 {
-       background: linear-gradient(to right, #87488f54, #41206d69);
-       width: 70vw;
-   }
-
-   .box2 {
-       background-color: rgba(181, 137, 252, 0.838);
-       width: 40vw;  /*30vw*/
-       transition: all 1s;
-   }
-
-   .databox {
-       background-color: rgba(237, 236, 188, 0.532);
-       height: 70vh;
-       justify-self: center;
-       border-radius: 20px;
-       margin-top: 5px;
-       overflow-x: auto;
-       white-space: pre-line;
-       width: auto;
-
-   }
-
-   .message {
-       padding: 20px;
-       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-   }
-
-   .form-control {
-       background-color: rgba(201, 189, 232, 0.637);
-       max-height: 70vh;
-       height: 60vh;
-       font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-       font-size: larger;
-       font-weight: bold;
-       font-style: italic;
-   }
-
-   .submit,
-   .button,
-   .Refresh,
-   .delet {
-       border: 1px solid black;
-       border-radius: 20px;
-       width: fit-content;
-       padding: 1px 7px;
-       background-color: lightblue;
-       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-       justify-self: center;
-       margin-top: 5px;
-   }
-
-   .hover:hover {
-       cursor: pointer;
-       background-color: rgba(28, 28, 255, 0.258);
-       color: white;
-   }
-
-
-
-    .dataplate {
-       background-color: rgba(242, 242, 242, 0.884);
-       border-radius: 10px;
-       padding: 3px 10px;
-       margin: 10px;
-       transition: all 0.5s;
-       white-space: pre-line;
-       width: 27vw;
+    /* ---- Navbar ---- */
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
-   .deletbutton {
-       border: none;
-       background-color: none;
-       display: flex;
-       flex-direction: end;
-       padding: 2px 5px;
-       background-color: #ce4a4a;
-       color: white;
-       border-radius: 20px;
-       font-size: small;
-       margin-top: 5px;
-       transition: all 0.5s;
-   }
+    nav > div:last-child {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+    }
 
-   .deletbutton:hover {
-       background-color: red;
-       scale: 1.1;
-   }
+    nav > div:last-child > * {
+        font-size: 0.9rem;
+    }
+
+    /* ---- Do boxes ka wrapper ---- */
+    .main > div {
+        flex-direction: column;
+        gap: 16px;
+        margin-left: 12px;
+        margin-right: 12px;
+    }
+
+    .box1,
+    .box2 {
+        width: 100%;
+        height: auto;
+        margin-top: 12px;
+    }
+
+    /* Title + date wrap ho sakein */
+    .title {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .title>input {
+        flex: 1 1 140px;
+        font-size: 16px; /* iOS zoom avoid */
+    }
+
+    .form-control {
+        height: 45vh;
+        min-height: 220px;
+        font-size: 1rem;
+    }
+
+    .databox {
+        width: 100%;
+        height: 55vh;
+        min-height: 300px;
+    }
+
+    .message {
+        padding: 14px;
+    }
+
+    .dataplate {
+        width: calc(100% - 20px);
+    }
+
+    footer.footer {
+        margin-top: 16px;
+    }
+}
 
 
-   ::selection {
-       background-color: rgba(255, 255, 0, 0.466);
-       /* highlight color */
-       color: black;
-   }
+/* =========================================================
+   Mobile  (<= 480px)
+   ========================================================= */
+@media (max-width: 480px) {
 
-   /* Firefox */
-   * {
-       scrollbar-width: thin;
-       scrollbar-color: #3431e568 transparent;
-       /* thumb color, track color */
-   }
+    nav > div:first-child .font-bold {
+        font-size: 1.05rem;
+    }
 
-   /* Webkit browsers: Chrome, Edge, Safari */
-   *::-webkit-scrollbar {
-       width: 8px;
-       /* scrollbar width */
-   }
+    nav > div:last-child > * {
+        font-size: 0.8rem;
+        padding-left: 8px;
+        padding-right: 8px;
+    }
 
-   *::-webkit-scrollbar-track {
-       background: transparent;
-       border-radius: 4px;
-       /* smooth track corners */
-   }
+    .main > div {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 
-   *::-webkit-scrollbar-thumb {
-       background-color: #adb2e6;
-       /* light blue thumb */
-       border-radius: 4px;
-       /* smooth thumb corners */
-   }
+    .box1,
+    .box2 {
+        padding: 8px;
+        border-radius: 16px;
+    }
+
+    /* Title aur date ek ke neeche ek */
+    .title>input {
+        flex: 1 1 100%;
+    }
+
+    .form-control {
+        height: 40vh;
+        min-height: 200px;
+    }
+
+    .databox {
+        height: 50vh;
+        min-height: 260px;
+        border-radius: 16px;
+    }
+
+    .dataplate {
+        margin: 8px;
+        width: calc(100% - 16px);
+        max-width: calc(100% - 16px);
+    }
+}
